@@ -2,13 +2,13 @@ pipeline {
     agent any
 
 environment {
-    EC2_IP = '3.88.158.199'
+    EC2_IP = '34.201.63.167'
 }
     stages {
         stage ('fetch code') {
             steps {
                 script {
-                    echo "Pull source code from Git"
+                    echo "Pull source code from Github"
                     git branch: 'main', url: 'https://github.com/Dee-code-bar/jenkins_deploy_ec2.git'
                 }
             }
